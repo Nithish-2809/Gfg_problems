@@ -1,29 +1,29 @@
 class Solution {
-public:
+  public:
     vector<int> bfs(vector<vector<int>> &adj) {
-        vector<int> ans;
+        // code here
         int n = adj.size();
-
-        vector<int> visited(n, 0);
-        queue<int> q;
-
-        visited[0] = 1;
+        vector<int>visited(n+1,0);
+        vector<int>ans;
+        queue<int>q;
+        
         q.push(0);
-
-        while (!q.empty()) {
+        visited[0] = 1;
+        
+        while(!q.empty()) {
             int node = q.front();
             q.pop();
-
+            
             ans.push_back(node);
-
-            for (int neighbour : adj[node]) {
-                if (!visited[neighbour]) {
-                    visited[neighbour] = 1;
-                    q.push(neighbour);
+            
+            for(auto it : adj[node]) {
+                if(!visited[it]) {
+                    q.push(it);
+                    visited[it] = 1;
                 }
             }
         }
-
-        return ans;
+    
+    return ans;
     }
 };
