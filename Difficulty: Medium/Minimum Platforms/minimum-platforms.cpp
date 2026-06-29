@@ -4,15 +4,14 @@ class Solution {
         // code here
         sort(arr.begin(),arr.end());
         sort(dep.begin(),dep.end());
-        int n1 = arr.size();
-        int n2 = dep.size();
         
+        int n = arr.size();
         int i = 0;
         int j = 0;
         int platforms = 0;
-        int maxPlatforms = INT_MIN;
+        int maxPlatforms = 0;
         
-        while(i<n1 && j<n2) {
+        while(i<n && j<n) {
             if(arr[i]<=dep[j]) {
                 platforms++;
                 i++;
@@ -24,8 +23,6 @@ class Solution {
             
             maxPlatforms = max(maxPlatforms,platforms);
         }
-    
-    
     return maxPlatforms;
     }
 };
