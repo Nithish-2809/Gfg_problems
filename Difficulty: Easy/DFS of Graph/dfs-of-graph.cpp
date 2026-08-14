@@ -1,32 +1,31 @@
-void dfsTraversal(int start,
-                  const vector<vector<int>>& adj,
-                  vector<int>& visited,
-                  vector<int>& ans) {
+void dfsTraversal(vector<vector<int>>&adj,vector<int>&ans,int node,vector<int>&visited) {
+    visited[node] = 1;
+    ans.push_back(node);
     
-    visited[start] = 1;
-    ans.push_back(start);
-    
-    for(auto it : adj[start]) {
+    for(auto it : adj[node]) {
         if(!visited[it]) {
-            dfsTraversal(it,adj,visited,ans);
+            dfsTraversal(adj,ans,it,visited);
         }
     }
 }
+
+
+
+
+
 
 
 class Solution {
   public:
     vector<int> dfs(vector<vector<int>>& adj) {
         // Code here
+        vector<int>ans;
         int n = adj.size();
         
         vector<int>visited(n,0);
-        vector<int>ans;
         
-        
-        dfsTraversal(0,adj,visited,ans);
+        dfsTraversal(adj,ans,0,visited);
         
     return ans;
-        
     }
 };
