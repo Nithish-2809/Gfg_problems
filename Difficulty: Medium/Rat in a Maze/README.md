@@ -13,4 +13,4 @@
 <strong>Output: </strong>[]
 <strong>Explanation</strong>: No path exists as the destination cell (1, 1) is blocked.
 </span></pre>
-<p><span style="font-size: 14pt;"><strong>Constraints:</strong><br>2 ≤ n ≤ 5<br>0 ≤ maze[i][j] ≤ 1</span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Amazon</code>&nbsp;<code>Microsoft</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Backtracking</code>&nbsp;<code>Algorithms</code>&nbsp;
+<p><span style="font-size: 14pt;"><strong>Constraints:</strong><br>2 ≤ n ≤ 5<br>0 ≤ maze[i][j] ≤ 1</span></p></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Amazon</code>&nbsp;<code>Microsoft</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Backtracking</code>&nbsp;
