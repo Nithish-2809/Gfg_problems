@@ -1,15 +1,17 @@
 class Solution {
   public:
-    void floydWarshall(vector<vector<int>> &grid) {
-        // Code here
-        int n = grid.size();
-        
-        for(int via = 0;via<n;via++) {
-            for(int i=0;i<n;i++) {
-                for(int j=0;j<n;j++) {
-                    if(grid[i][via] != 1e8 && grid[via][j] != 1e8) {
-                        grid[i][j] = min(grid[i][j],grid[i][via] + grid[via][j]);
-                    }
+    void floydWarshall(vector<vector<int>> &dist) {
+        int n = dist.size();
+
+        for(int k = 0; k < n; k++) {
+            for(int i = 0; i < n; i++) {
+                for(int j = 0; j < n; j++) {
+
+                    if(dist[i][k] == 1e8 || dist[k][j] == 1e8)
+                        continue;
+
+                    dist[i][j] = min(dist[i][j],
+                                     dist[i][k] + dist[k][j]);
                 }
             }
         }
